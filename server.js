@@ -176,9 +176,7 @@ app.delete('/api/party/:id', (req,res) => {
 });
 
 // Create a candidate
-app.post('/api/candidate', ({
-    body
-}, res) => {
+app.post('/api/candidate', ({body}, res) => {
     const errors = inputCheck(body, 'first_name', 'last_name', 'industry_connected');
     if (errors) {
         res.status(400).json({
